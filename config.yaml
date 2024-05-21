@@ -1,0 +1,9 @@
+env: "dev"
+http:
+  port: 8000
+database:
+  host: "database"
+  user: "postgres"
+  password: "postgres"
+  name: "postgres"
+  port: "5432"
