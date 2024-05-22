@@ -208,7 +208,8 @@ func (r Repository) GetAllTransactions(ctx context.Context, db database.DBTX) ([
 		}
 
 		if accountId.Valid {
-			t.Account1.Id = accountId.Int64
+			t.Account2 = new(account.Account)
+			t.Account2.Id = accountId.Int64
 		}
 		if accountName.Valid {
 			t.Account2.Name = &accountName.String
@@ -256,7 +257,6 @@ func (r Repository) GetAllTransactionsWithAccountID(ctx context.Context, db data
 			t.Account2.Id = accountId.Int64
 		}
 		if accountName.Valid {
-
 			t.Account2.Name = &accountName.String
 		}
 
